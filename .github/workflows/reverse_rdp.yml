@@ -9,12 +9,12 @@ on:
       loca:
         description: 'Ngrog region: us - eu - ap - au - sa - jp - in '
         required: true
-        default: 'eu'
+        default: 'us'
 jobs:
-  build:
+ build:
 
     runs-on: windows-latest
-    
+
     steps:
     - name: Download
       run: Invoke-WebRequest https://cdn.jsdelivr.net/gh/rialms/rdp@master/dl/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip

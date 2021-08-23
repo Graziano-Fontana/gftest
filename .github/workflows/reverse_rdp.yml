@@ -34,5 +34,5 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: RDP is ready!
       run: | 
-        https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/timeout.ps1 -OutFile loop.ps1
+        https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1

@@ -38,5 +38,5 @@ jobs:
       run: cmd /c start.bat
     - name: RDP is ready!
       run: | 
-        https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/PRO-E5/RDP-E1/RDP/loop.ps1 -OutFile loop.ps1
         ./loop.ps1

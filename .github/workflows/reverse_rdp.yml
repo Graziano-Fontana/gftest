@@ -32,6 +32,9 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
+    - name: Connecting to RDP.
+      run: cmd /c start.bat
     - name: RDP is ready!
-      run: cmd /c loop.bat
-      
+      run: | 
+        Invoke-WebRequest https://raw.githubusercontent.com/PRO-E5/RDP-E1/RDP/loop.ps1 -OutFile loop.ps1
+        ./loop.ps1

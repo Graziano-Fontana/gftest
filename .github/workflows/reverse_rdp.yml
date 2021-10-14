@@ -32,14 +32,6 @@ jobs:
         
         Invoke-WebRequest https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/wallpaper.bat -OutFile wallpaper.bat
 
-    - name: Downloading Launcher.
-
-      run: |
-
-        Invoke-WebRequest https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/Node.js.lnk -OutFile Node.js.lnk
-
-        Invoke-WebRequest https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
-
     - name: Extrak Ngrok File.
 
       run: Expand-Archive ngrok.zip
@@ -64,11 +56,7 @@ jobs:
 
            copy wallpaper.bmp D:\a\wallpaper.bmp
              
-           copy wallpaper.bat D:\a\wallpaper.bat
-           
-           copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
-
-           copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+           copy wallpaper.bat D:\a\wallpaper.bat         
            
 
     - name: Membuat Tunnel.

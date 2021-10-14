@@ -1,10 +1,6 @@
 name: CID
 
 on: workflow_dispatch
-
-jobs:
-
-  build:
     inputs:
       authcode:
         description: 'Ngrog Token'
@@ -13,6 +9,10 @@ jobs:
         description: 'Ngrog region: us - eu - ap - au - sa - jp - in '
         required: true
         default: 'us'
+
+jobs:
+
+  build:
         
     runs-on: windows-2022
 

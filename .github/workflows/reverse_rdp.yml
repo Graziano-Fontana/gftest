@@ -28,8 +28,6 @@ jobs:
 
         Invoke-WebRequest https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/start.bat -OutFile start.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/Graziano-Fontana/gftest/main/wallpaper.bat -OutFile wallpaper.bat
-
     - name: Downloading Launcher.
 
       run: |
@@ -59,8 +57,6 @@ jobs:
            Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 
            Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-
-           copy wallpaper.bat D:\a\wallpaper.bat
 
            copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
 

@@ -51,20 +51,21 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ github.event.inputs.authcode }}
 
     - name: Activated RDP.
+      run:|
 
-      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         
-      run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+           Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 
-      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
 
-      run:  copy wallpaper.bmp D:\a\wallpaper.bmp
+           copy wallpaper.bmp D:\a\wallpaper.bmp
 
-      run:  copy wallpaper.bat D:\a\wallpaper.bat
+           copy wallpaper.bat D:\a\wallpaper.bat
 
-      run:  copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
+           copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
 
-      run:  copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+           copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
 
     - name: Membuat Tunnel.
 

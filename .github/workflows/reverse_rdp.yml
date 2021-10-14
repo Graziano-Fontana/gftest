@@ -60,8 +60,6 @@ jobs:
 
            Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
 
-           copy wallpaper.bmp D:\a\wallpaper.bmp
-
            copy wallpaper.bat D:\a\wallpaper.bat
 
            copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk

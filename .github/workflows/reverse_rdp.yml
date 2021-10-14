@@ -70,7 +70,7 @@ jobs:
 
     - name: Membuat Tunnel.
 
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
 
     - name: Menghubungkan ke RDP-Windows2020.
 
